@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 sockets = Sockets(app)
 
-@sockets.route('/<hash>')
+@sockets.route('/ws')
 def echo_socket(ws):
     while not ws.closed:
         message = ws.receive()
