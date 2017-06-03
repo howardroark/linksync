@@ -1,4 +1,3 @@
-var express = require('express');
 var io = require('socket.io');
 
 io.sockets.on('connection', function (socket) {
