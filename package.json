@@ -1,5 +1,8 @@
 {
   "name": "linksync",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "express": "*",
     "socket.io": "*"
