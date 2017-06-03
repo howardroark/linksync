@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sockets import Sockets
 import os
 
@@ -13,4 +13,4 @@ def echo_socket(ws):
 
 @app.route('/')
 def index():
-    return 'linksync'
+    return render_template('index.html')
