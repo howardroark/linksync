@@ -1,4 +1,10 @@
 <html>
   linksync
   <script type="text/javascript" src="static/reconnecting-websocket.min.js"></script>
+  <script>
+    var socket = new ReconnectingWebSocket('wss://linksync.herokuapp.com/test');
+    socket.onmessage(function (message) {
+      console.log(message);
+    });
+  </script>
 </html>
