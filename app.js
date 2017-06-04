@@ -1,4 +1,8 @@
 var io = require('socket.io');
+var express = require('express');
+var app = express();
+
+app.use(express.static('public'));
 
 io.sockets.on('connection', function (socket) {
     socket.on('join', function (channel) {
