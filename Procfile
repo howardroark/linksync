@@ -1,1 +1,1 @@
-web: npm start
+web: harp server --port $PORT
