@@ -1,4 +1,14 @@
-var io = require('socket.io');
+var socketIO = require('socket.io');
+var express require('express');
+var path = require('path');
+
+var server = express()
+    .use(function (req, res) {
+        res.sendFile(path.join(__dirname, 'public/index.html'));
+    })
+    .listen(process.env.PORT);
+
+var io = socketIO(server);
 
 io.sockets.on('connection', function (socket) {
     socket.on('join', function (channel) {
