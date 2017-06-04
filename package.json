@@ -1,10 +1,10 @@
 {
   "name": "linksync",
   "scripts": {
-    "start": "node app.js"
+    "start": "harp server --port $PORT & node app.js"
   },
   "dependencies": {
-    "express": "*",
+    "harp": "*",
     "socket.io": "*"
   }
 }
